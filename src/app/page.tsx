@@ -43,7 +43,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
                 <h3 className="text-2xl font-semibold mb-4">Experienced Team</h3>
-                <p>Over 20 years of experience in Local Authorities and care provision</p>
+                <p>Over 20 years of experience in Local Authorities and care provision to date.</p>
               </div>
               <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
                 <h3 className="text-2xl font-semibold mb-4">Comprehensive Services</h3>
@@ -51,7 +51,7 @@ export default function Home() {
               </div>
               <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
                 <h3 className="text-2xl font-semibold mb-4">Tailored Support</h3>
-                <p>Customized solutions for diverse care settings and communities</p>
+                <p>Customized solutions for diverse care settings and communities anywhere in the UK.</p>
               </div>
             </div>
           </div>
