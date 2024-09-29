@@ -9,7 +9,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] bg-cover bg-center mix-blend-overlay"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">Welcome to REG 44 CONSULTANCY</h1>
-            <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Pioneering excellence in Semi Independent Accommodation and Residential Children's Home care since 2020</p>
+            <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Pioneering excellence in Semi Independent Accommodation and Residential Children's Home care since 2010</p>
             <a href="#" className="bg-white text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-flex items-center">
               Discover Our Approach
               <ChevronRightIcon className="h-5 w-5 ml-2" />
