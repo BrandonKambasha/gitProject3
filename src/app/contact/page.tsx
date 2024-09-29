@@ -1,11 +1,8 @@
 import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/solid'
 
-
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
-      
-
       <main>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 opacity-80"></div>
@@ -77,7 +74,7 @@ export default function Contact() {
             <h2 className="text-4xl font-bold mb-8 text-white">Visit Us</h2>
             <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-4 rounded-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2422.140844005892!2d1.1815015!3d52.6228135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3f5b8a8b88f%3A0x4c3c0c3c3c3c3c3c!2sOak%20Lodge%20Business%20Centre!5e0!3m2!1sen!2suk!4v1625581234567!5m2!1sen!2suk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2422.140844005892!2d1.1815015!3d52.6228135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3f5b8a8b88f%3A0x4c3c0c3c3c3c3c3c!2sOak%20Lodge%20Business%20Centre%2C%20129%20School%20Lane%2C%20Little%20Melton%2C%20Norwich%2C%20NR9%203LB!5e0!3m2!1sen!2suk!4v1625581234567!5m2!1sen!2suk"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
@@ -88,7 +85,6 @@ export default function Contact() {
           </div>
         </section>
       </main>
-
     </div>
   )
 }

@@ -5,14 +5,12 @@ import myImage from '../../images/reg44.png'
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
-
-
       <main>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 opacity-80"></div>
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] bg-cover bg-center mix-blend-overlay"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">About Reg44 Consultancy</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">About REG 44 CONSULTANCY</h1>
             <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Pioneering the future of care with expertise and innovation</p>
           </div>
         </section>
@@ -22,14 +20,14 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Mission</h2>
               <p className="text-gray-600 mb-4">
-                At Reg44 Consultancy, we are dedicated to elevating the standards of care in Semi Independent Accommodation and Residential Children's Homes across the United Kingdom. Our mission is to empower care providers with cutting-edge solutions and expert guidance, ensuring the best possible outcomes for young people in care.
+                At REG 44 CONSULTANCY, we are dedicated to supporting Semi Independent Accommodation and Residential Children's Home Providers across the United Kingdom. Our mission is to help organizations meet the needs of young people they support, ensuring the best possible outcomes for children and young adults in care settings.
               </p>
               <p className="text-gray-600 mb-4">
-                We believe in harnessing the power of technology and human expertise to create a brighter future for children and young adults in care settings. Our innovative approaches and commitment to excellence drive us to continually improve and adapt to the evolving needs of the care sector.
+                We work with Local Authorities, Organizations, and private companies, offering our expertise to those working with Families on the Edge of Care, Children who are Looked After, Unaccompanied Asylum Seeking Children, Care Leavers, Migrant Families, and families from Black Asian and Ethnic Minority Backgrounds.
               </p>
             </div>
             <div className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl">
-              <Image src={myImage} alt="Reg44 Consultancy Team" width={600} height={400} className="rounded-lg" />
+              <Image src={myImage} alt="REG 44 CONSULTANCY Team" width={600} height={400} className="rounded-lg" />
             </div>
           </div>
         </section>
@@ -39,9 +37,9 @@ export default function About() {
             <h2 className="text-4xl font-bold mb-12 text-center">Our Core Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { icon: UserGroupIcon, title: "Compassion", description: "We approach our work with empathy and understanding, always putting the needs of young people first." },
-                { icon: ShieldCheckIcon, title: "Integrity", description: "We uphold the highest standards of professionalism and ethical conduct in all our interactions." },
-                { icon: AcademicCapIcon, title: "Innovation", description: "We continuously seek new and improved ways to support care providers and enhance the lives of young people." },
+                { icon: UserGroupIcon, title: "Expertise", description: "We bring over 20 years of experience in Local Authorities to every project." },
+                { icon: ShieldCheckIcon, title: "Quality", description: "We uphold the highest standards in our services and recommendations." },
+                { icon: AcademicCapIcon, title: "Innovation", description: "We continuously seek new ways to improve care standards and practices." },
               ].map((value, index) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
                   <value.icon className="h-12 w-12 text-orange-300 mb-4" />
@@ -54,42 +52,30 @@ export default function About() {
         </section>
 
         <section className="container mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Our Journey</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Our Team's Expertise</h2>
           <div className="space-y-8">
             <div className="flex flex-col md:flex-row items-center bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-6 rounded-xl shadow-lg">
               <div className="md:w-1/4 mb-4 md:mb-0">
-                <span className="text-3xl font-bold text-blue-600">2004</span>
+                <span className="text-3xl font-bold text-blue-600">Safeguarding</span>
               </div>
               <div className="md:w-3/4">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Foundation</h3>
-                <p className="text-gray-600">Reg44 Consultancy was established with a vision to improve care standards across the UK.</p>
+                <p className="text-gray-600">Our team includes experienced Safeguarding Audit Officers, ensuring the highest standards of child protection in care settings.</p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-6 rounded-xl shadow-lg">
               <div className="md:w-1/4 mb-4 md:mb-0">
-                <span className="text-3xl font-bold text-blue-600">2010</span>
+                <span className="text-3xl font-bold text-blue-600">Quality Assurance</span>
               </div>
               <div className="md:w-3/4">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Expansion of Services</h3>
-                <p className="text-gray-600">We broadened our expertise to include comprehensive house inspections and specialized consultancy services.</p>
+                <p className="text-gray-600">With Quality Assurance Leads on our team, we help organizations implement robust quality management systems.</p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-6 rounded-xl shadow-lg">
               <div className="md:w-1/4 mb-4 md:mb-0">
-                <span className="text-3xl font-bold text-blue-600">2020</span>
+                <span className="text-3xl font-bold text-blue-600">Social Work</span>
               </div>
               <div className="md:w-3/4">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Digital Transformation</h3>
-                <p className="text-gray-600">We embraced cutting-edge technology to enhance our services and provide more efficient, data-driven solutions.</p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-6 rounded-xl shadow-lg">
-              <div className="md:w-1/4 mb-4 md:mb-0">
-                <span className="text-3xl font-bold text-blue-600">Today</span>
-              </div>
-              <div className="md:w-3/4">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Leading the Future of Care</h3>
-                <p className="text-gray-600">We continue to innovate and set new standards in the care sector, always striving for excellence and positive outcomes for young people.</p>
+                <p className="text-gray-600">Our team includes experienced Social Workers who understand the complexities of child care and protection.</p>
               </div>
             </div>
           </div>
@@ -105,8 +91,6 @@ export default function About() {
           </div>
         </section>
       </main>
-
-
     </div>
   )
 }
