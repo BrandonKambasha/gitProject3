@@ -1,7 +1,6 @@
-import Image from 'next/image'
-import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, PhoneIcon, EnvelopeIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-import myImage from '../images/reg44.png'
-import Link from 'next/link'
+
+import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { UserGroupIcon, ShieldCheckIcon, AcademicCapIcon, ChevronRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
+import { UserGroupIcon, ShieldCheckIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 import myImage from '../../images/reg44.png'
 
 export default function About() {

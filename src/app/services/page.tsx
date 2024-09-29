@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChartBarIcon, UserGroupIcon, AcademicCapIcon, PhoneIcon, EnvelopeIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-import myImage from '../images/reg44.png'
+import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChartBarIcon, UserGroupIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 
 export default function Services() {
   return (
