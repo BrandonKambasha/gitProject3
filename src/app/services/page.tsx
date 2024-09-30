@@ -52,18 +52,16 @@ export default function Services() {
 
         <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center">Additional Services</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center">Our Services Include</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
-                <h3 className="text-2xl font-semibold mb-4">Location Risk Assessments</h3>
-                <p>Comprehensive assessments to ensure the safety and suitability of care locations.</p>
+                <h3 className="text-2xl font-semibold mb-4">Reg 44 visit to residential children’s homes</h3>
               </div>
               <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
-                <h3 className="text-2xl font-semibold mb-4">Ofsted Preparation</h3>
-                <p>Expert support in preparing for Ofsted inspections and implementing improvement plans.</p>
+                <h3 className="text-2xl font-semibold mb-4">Independent Visits and Inspection to Semi Independent Accommodation</h3>
               </div>
               <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
-                <h3 className="text-2xl font-semibold mb-4">Specialized Support</h3>
+                <h3 className="text-2xl font-semibold mb-4">Undertaking Location Risk Assessments</h3>
                 <p>Tailored services for working with migrant communities and Black and Asian Ethnic Minority communities.</p>
               </div>
             </div>
