@@ -87,6 +87,12 @@ export default function Services() {
                 <h3 className="text-2xl font-semibold mb-4">Ofsted Preparation</h3>
                 <p>Expert support in preparing for Ofsted inspections and implementing improvement plans.</p>
               </div>
+
+              <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4">Management Coaching and Mentoring</h3>
+                <p>Expert support in preparing for Ofsted inspections and implementing improvement plans.</p>
+              </div>
+
               <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
                 <h3 className="text-2xl font-semibold mb-4">Specialized Support</h3>
                 <p>Tailored services for working with migrant communities and Black and Asian Ethnic Minority communities.</p>
