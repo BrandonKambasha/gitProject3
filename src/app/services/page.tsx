@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChartBarIcon, UserGroupIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 
 
