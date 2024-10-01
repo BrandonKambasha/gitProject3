@@ -46,9 +46,22 @@ export default function Services() {
           />
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">Our Services</h1>
-            <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">
-              Comprehensive solutions to elevate care standards in Semi Independent Accommodation and Residential Children's Homes
-            </p>
+            <ol className="list-disc list-inside text-white mb-8">
+              <li>Reg 44 visit to residential children’s homes</li>
+              <li>Independent Visits and Inspection to Semi Independent Accommodation</li>
+              <li>Undertaking Location Risk Assessments</li>
+              <li>Management Coaching and Mentoring</li>
+              <li>Development of Practice Templates for recordings</li>
+              <li>Developing and Implementation of Quality Assurance Frameworks</li>
+              <li>Ofsted Preparation Visits</li>
+              <li>Support with improvement plans following Ofsted visits</li>
+              <li>Learning and Development for Local Authorities</li>
+              <li>Developing and delivering relevant training based on organisational needs</li>
+
+            </ol>
+          
+
+            <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Comprehensive solutions to elevate care standards in Semi Independent Accommodation and Residential Children's Homes</p>
           </div>
         </section>
 
@@ -80,13 +93,25 @@ export default function Services() {
           />
           <div className="container mx-auto px-4 relative z-10">
             <h2 className="text-4xl font-bold mb-12 text-center">Additional Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {additionalServices.map((service, index) => (
-                <div key={index} className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl flex items-center">
-                  <ChevronRightIcon className="h-6 w-6 mr-4 text-orange-300" />
-                  <p>{service}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4">Location Risk Assessments</h3>
+                <p>Comprehensive assessments to ensure the safety and suitability of care locations.</p>
+              </div>
+              <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4">Ofsted Preparation</h3>
+                <p>Expert support in preparing for Ofsted inspections and implementing improvement plans.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4">Management Coaching and Mentoring</h3>
+                <p>Expert support in preparing for Ofsted inspections and implementing improvement plans.</p>
+              </div>
+
+              <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4">Specialized Support</h3>
+                <p>Tailored services for working with migrant communities and Black and Asian Ethnic Minority communities.</p>
+              </div>
             </div>
           </div>
         </section>
