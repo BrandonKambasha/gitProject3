@@ -1,4 +1,9 @@
 import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image'
+import myImage from '../images/img4.avif'
+import myImage2 from '../images/img9.avif'
+import myImage3 from '../images/img7.png'
+import teamImage from '../images/office.jpeg'
 
 export default function Home() {
   return (
@@ -6,7 +11,14 @@ export default function Home() {
       <main>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 opacity-80"></div>
-          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] bg-cover bg-center mix-blend-overlay"></div>
+          <Image
+            src=""
+            alt="Hero background"
+            layout="fill"
+            objectFit="cover"
+            className="mix-blend-overlay"
+            
+          />
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">Welcome to REG 44 CONSULTANCY</h1>
             <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Pioneering excellence in Semi Independent Accommodation and Residential Children's Home care since 2010</p>
@@ -21,9 +33,9 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Our Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: StarIcon, title: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes" },
-              { icon: HomeIcon, title: "House Inspections", description: "Thorough inspections of Semi Independent Accommodation" },
-              { icon: ClipboardDocumentCheckIcon, title: "Consultancy Services", description: "Professional guidance for new and existing care provisions" },
+              { icon: StarIcon, title: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes", image: myImage },
+              { icon: HomeIcon, title: "House Inspections", description: "Thorough inspections of Semi Independent Accommodation", image: myImage2 },
+              { icon: ClipboardDocumentCheckIcon, title: "Consultancy Services", description: "Professional guidance for new and existing care provisions", image: myImage3 },
             ].map((service, index) => (
               <div key={index} className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl text-center hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
                 <div className="relative mb-6">
@@ -31,7 +43,14 @@ export default function Home() {
                   <service.icon className="h-16 w-16 text-orange-500 mx-auto relative z-10" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={300}
+                  height={200}
+                  className="rounded-lg"
+                />
               </div>
             ))}
           </div>

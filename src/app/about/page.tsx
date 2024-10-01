@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { UserGroupIcon, ShieldCheckIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 import myImage from '../../images/reg44.png'
+import teamImage from '../../images/img3.jpeg'
+import officeImage from '../../images/img9.avif'
 
 export default function About() {
   return (
@@ -8,7 +10,13 @@ export default function About() {
       <main>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 opacity-80"></div>
-          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] bg-cover bg-center mix-blend-overlay"></div>
+          <Image
+            src={teamImage}
+            alt="Team background"
+            layout="fill"
+            objectFit="cover"
+            className="mix-blend-overlay"
+          />
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">About REG 44 CONSULTANCY</h1>
             <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Pioneering the future of care with expertise and innovation</p>
@@ -81,10 +89,17 @@ export default function About() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-orange-400 to-blue-500">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-8 text-white">Ready to Elevate Your Care Standards?</h2>
-            <a href="/contact" className="bg-white text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-flex items-center">
+        <section className="py-20 relative">
+          <Image
+            src={officeImage}
+            alt="Office background"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-20"
+          />
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <h2 className="text-4xl font-bold mb-8 text-gray-800">Ready to Elevate Your Care Standards?</h2>
+            <a href="/contact" className="bg-gradient-to-r from-orange-400 to-blue-500 text-white hover:from-orange-500 hover:to-blue-600 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-flex items-center">
               Get in Touch
               <ChevronRightIcon className="h-5 w-5 ml-2" />
             </a>
