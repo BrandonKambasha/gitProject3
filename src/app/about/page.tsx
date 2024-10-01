@@ -19,16 +19,16 @@ export default function About() {
           />
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">About Us</h1>
-            <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Reg 44 Consultancy is a specialist consultancy organisation that supports Semi Independent
-Accommodation and Residential Children’s Home Providers in the United Kingdom.</p>
-// ... existing code ...
-<p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">We
-work with Local Authorities, Organisations and private companies to help them meet the
-needs of young people they support. We have experience of working with organisations that
-work with Families on the Edge of Care, Children who are Looked After, Unaccompanied
-Asylum Seeking Children, Care Leavers , Migrant Families and families from Black Asian
-and Ethnic Minority Backgrounds.</p>
-// ... existing code ... 
+            <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">
+                Reg 44 Consultancy is a specialist consultancy organisation that supports Semi Independent
+                Accommodation and Residential Children’s Home Providers in the United Kingdom.</p>
+              <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">
+                We work with Local Authorities, Organisations and private companies to help them meet the
+                needs of young people they support. We have experience of working with organisations that
+                work with Families on the Edge of Care, Children who are Looked After, Unaccompanied
+                Asylum Seeking Children, Care Leavers , Migrant Families and families from Black Asian
+                and Ethnic Minority Backgrounds.
+                </p>
           </div>
         </section>
 
