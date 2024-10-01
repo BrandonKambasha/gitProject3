@@ -3,7 +3,6 @@ import Image from 'next/image'
 import myImage from '../images/img4.avif'
 import myImage2 from '../images/img9.avif'
 import myImage3 from '../images/img7.png'
-import teamImage from '../images/office.jpeg'
 
 export default function Home() {
   return (
