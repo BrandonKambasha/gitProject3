@@ -1,4 +1,6 @@
 import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image'
+import myImage from '../../images/img5.jpeg'
 
 export default function Contact() {
   return (
@@ -6,8 +8,13 @@ export default function Contact() {
       <main>
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 opacity-80"></div>
-          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] bg-cover bg-center mix-blend-overlay"></div>
-          <div className="container mx-auto px-4 text-center relative z-10">
+          <Image
+            src={myImage}
+            alt="Services Hero"
+            layout="fill"
+            objectFit="cover"
+            className="mix-blend-overlay"
+          />          <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">Get in Touch</h1>
             <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">We're here to answer your questions and discuss how we can help elevate your care standards</p>
           </div>
