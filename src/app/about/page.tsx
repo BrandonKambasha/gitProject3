@@ -1,104 +1,186 @@
+"use client"
+
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { UserGroupIcon, ShieldCheckIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import { UserGroupIcon, ShieldCheckIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import myImage from '../../images/img9.avif'
-import myImage2 from '../../images/office.jpeg'
-import myImage3 from '../../images/reg44.png'
+import myImage2 from '../../images/reg44.png'
 
+const MotionLink = motion(Link)
 
 export default function About() {
+  const containerRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  })
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+
   const coreValues = [
     { icon: UserGroupIcon, title: "Expertise", description: "We bring over 20 years of experience in Local Authorities to every project." },
     { icon: ShieldCheckIcon, title: "Quality", description: "We uphold the highest standards in our services and recommendations." },
     { icon: AcademicCapIcon, title: "Innovation", description: "We continuously seek new ways to improve care standards and practices." },
   ]
 
-  const expertise = [
-    { title: "Safeguarding", description: "Our team includes experienced Safeguarding Audit Officers, ensuring the highest standards of child protection in care settings." },
-    { title: "Quality Assurance", description: "With Quality Assurance Leads on our team, we help organizations implement robust quality management systems." },
-    { title: "Social Work", description: "Our team includes experienced Social Workers who understand the complexities of child care and protection." },
-  ]
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <main>
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 opacity-90"></div>
-          <Image
-            src={myImage}
-            alt="Team background"
-            layout="fill"
-            objectFit="cover"
-            className="mix-blend-overlay"
-          />
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">About REG 44 CONSULTANCY</h1>
-            <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">Pioneering the future of care with expertise and innovation</p>
+    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50 overflow-hidden">
+      <motion.div
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url(${myImage.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          y: backgroundY
+        }}
+      />
+      <main className="relative z-10">
+        <section className="h-screen flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-7xl font-bold mb-6 text-blue-900"
+            >
+              About REG 44 CONSULTANCY
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-2xl mb-12 text-orange-700"
+            >
+              Pioneering the future of care with expertise and innovation
+            </motion.p>
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Mission</h2>
-              <p className="text-gray-600 mb-4">
-                At REG 44 CONSULTANCY, we are dedicated to supporting Semi Independent Accommodation and Residential Children's Home Providers across the United Kingdom. Our mission is to help organizations meet the needs of young people they support, ensuring the best possible outcomes for children and young adults in care settings.
-              </p>
-              <p className="text-gray-600 mb-4">
-                We work with Local Authorities, Organizations, and private companies, offering our expertise to those working with Families on the Edge of Care, Children who are Looked After, Unaccompanied Asylum Seeking Children, Care Leavers, Migrant Families, and families from Black Asian and Ethnic Minority Backgrounds.
-              </p>
-            </div>
-            <div className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl">
-              <Image src={myImage3} alt="REG 44 CONSULTANCY Team" width={600} height={400} className="rounded-lg" />
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20">
+        <section className="py-20 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center">Our Core Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-4xl font-bold mb-6 text-blue-900">Our Mission</h2>
+                <p className="text-orange-700 mb-4">
+                  At REG 44 CONSULTANCY, we are dedicated to supporting Semi Independent Accommodation and Residential Children's Home Providers across the United Kingdom. Our mission is to help organizations meet the needs of young people they support, ensuring the best possible outcomes for children and young adults in care settings.
+                </p>
+                <p className="text-orange-700 mb-4">
+                  We work with Local Authorities, Organizations, and private companies, offering our expertise to those working with Families on the Edge of Care, Children who are Looked After, Unaccompanied Asylum Seeking Children, Care Leavers, Migrant Families, and families from Black Asian and Ethnic Minority Backgrounds.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gradient-to-br from-orange-100 to-blue-100 p-8 rounded-2xl shadow-xl"
+              >
+                <Image src={myImage2.src} alt="REG 44 CONSULTANCY Team" width={600} height={400} className="rounded-lg" />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gradient-to-r from-orange-400 to-blue-400 text-white">
+          <div className="container mx-auto px-4">
+            <motion.h2
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold mb-12 text-center"
+            >
+              Our Core Values
+            </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {coreValues.map((value, index) => (
-                <div key={index} className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl">
-                  <value.icon className="h-12 w-12 text-indigo-300 mb-4" />
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl"
+                >
+                  <value.icon className="h-12 w-12 text-orange-200 mb-4" />
                   <h3 className="text-2xl font-semibold mb-4">{value.title}</h3>
                   <p>{value.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Our Team's Expertise</h2>
-          <div className="space-y-8">
-            {expertise.map((item, index) => (
-              <div key={index} className="flex flex-col md:flex-row items-center bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-6 rounded-xl shadow-lg">
-                <div className="md:w-1/4 mb-4 md:mb-0">
-                  <span className="text-3xl font-bold text-indigo-600">{item.title}</span>
-                </div>
-                <div className="md:w-3/4">
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
+        <section className="py-20 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg">
+          <div className="container mx-auto px-4">
+            <motion.h2
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold mb-12 text-center text-blue-900"
+            >
+              Our Team's Expertise
+            </motion.h2>
+            <div className="space-y-8">
+              {[
+                { title: "Safeguarding", description: "Our team includes experienced Safeguarding Audit Officers, ensuring the highest standards of child protection in care settings." },
+                { title: "Quality Assurance", description: "With Quality Assurance Leads on our team, we help organizations implement robust quality management systems." },
+                { title: "Social Work", description: "Our team includes experienced Social Workers who understand the complexities of child care and protection." },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="flex flex-col md:flex-row items-center bg-gradient-to-br from-orange-100 to-blue-100 p-6 rounded-xl shadow-lg"
+                >
+                  <div className="md:w-1/4 mb-4 md:mb-0">
+                    <span className="text-3xl font-bold text-blue-600">{item.title}</span>
+                  </div>
+                  <div className="md:w-3/4">
+                    <p className="text-orange-700">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="py-20 relative">
-          <Image
-            src={myImage2}
-            alt="Office background"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-20"
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 0.2 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image
+              src="/placeholder.svg?height=400&width=800"
+              alt="Office background"
+              layout="fill"
+              objectFit="cover"
+            />
+          </motion.div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-4xl font-bold mb-8 text-gray-800">Ready to Elevate Your Care Standards?</h2>
-            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-indigo-500 hover:to-blue-600 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-flex items-center">
+            <motion.h2
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold mb-8 text-blue-900"
+            >
+              Ready to Elevate Your Care Standards?
+            </motion.h2>
+            <MotionLink
+              href="/contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-orange-400 to-blue-400 text-white hover:from-blue-400 hover:to-orange-400 font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center"
+            >
               Get in Touch
               <ChevronRightIcon className="h-5 w-5 ml-2" />
-            </Link>
+            </MotionLink>
           </div>
         </section>
       </main>
