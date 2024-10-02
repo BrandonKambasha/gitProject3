@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { UserGroupIcon, ShieldCheckIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import backgroundImage from '../../images/office.jpeg'
 import teamImage from '../../images/career2.jpg'
-import myImage from '../../images/img2.avif'
 
 const MotionLink = motion(Link)
 
