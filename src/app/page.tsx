@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { ChevronRightIcon, StarIcon, HomeIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline'
-import myImage3 from '../images/reg44.png'
+import backgroundImage from '../images/homeImage.jpg'
 
 const MotionLink = motion(Link)
 
@@ -16,7 +16,7 @@ export default function Home() {
     offset: ["start start", "end start"]
   })
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
 
   const services = [
     { icon: StarIcon, title: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes" },
@@ -25,24 +25,25 @@ export default function Home() {
   ]
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50 overflow-hidden">
+    <div ref={containerRef} className="relative min-h-screen">
       <motion.div
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: `url(${myImage3.src})`,
+          backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          y: backgroundY
+          y: backgroundY,
+          filter: 'brightness(0.7)'
         }}
       />
-      <main className="relative z-10">
+      <div className="relative z-10">
         <section className="h-screen flex items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-7xl font-bold mb-6 text-blue-900"
+              className="text-5xl md:text-7xl font-bold mb-6 text-white"
             >
               REG 44 CONSULTANCY
             </motion.h1>
@@ -50,9 +51,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl mb-12 text-orange-700"
+              className="text-xl md:text-2xl mb-12 text-orange-200"
             >
-              Pioneering the future of care since 2010
+              Specialist consultancy for Semi Independent Accommodation and Residential Children's Home Providers
             </motion.p>
             <MotionLink
               href="/services"
@@ -74,7 +75,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold text-center mb-16 text-blue-900"
             >
-              Our Expertise
+              Our Services
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
@@ -156,7 +157,7 @@ export default function Home() {
             </MotionLink>
           </div>
         </section>
-      </main>
+      </div>
     </div>
   )
 }

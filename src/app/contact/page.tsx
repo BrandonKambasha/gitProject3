@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useRef } from 'react'
 import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline'
-import myImage from '../../images/contact.jpeg'
+import backgroundImage from '../../images/contact.jpg'
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState({ message: '', isError: false })
@@ -13,7 +13,7 @@ export default function Contact() {
     offset: ["start start", "end start"]
   })
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
 
   const contactInfo = [
     { icon: PhoneIcon, title: "Phone", content: "07704427990" },
@@ -31,39 +31,38 @@ export default function Contact() {
   }
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50 overflow-hidden">
+    <div ref={containerRef} className="relative min-h-screen bg-gradient-to-br from-orange-50 to-blue-50 overflow-hidden">
       <motion.div
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: `url(${myImage.src})`,
+          backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          y: backgroundY
+          y: backgroundY,
         }}
       />
-      <main className="relative z-10">
-        <section className="h-screen flex items-center justify-center">
-          <div className="container mx-auto px-4 text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-7xl font-bold mb-6 text-blue-900"
-            >
-              Get in Touch
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl mb-12 text-orange-700"
-            >
-              We're here to answer your questions and discuss how we can help elevate your care standards
-            </motion.p>
-          </div>
+      <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+      <main className="relative z-20">
+        <section className="min-h-screen flex flex-col justify-center items-center text-center text-white p-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold mb-6"
+          >
+            Get in Touch
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl mb-12"
+          >
+            We're here to answer your questions and discuss how we can help elevate your care standards
+          </motion.p>
         </section>
 
-        <section className="py-20 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <motion.div

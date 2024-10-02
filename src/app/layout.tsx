@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Pioneering the future of care services",
 };
 
-const navItems = ['Home', 'About', 'Services', 'Contact'];
+const navItems = ['Home', 'About', 'Services', 'Team', 'Contact'];
 
 export default function RootLayout({
   children,
@@ -31,36 +31,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-gray-100 to-white text-gray-800`}
-        >
-          <header id="main-header" className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-orange-300">
-            <div className="container mx-auto px-4 py-4">
-              <div className="flex justify-between items-center">
-                <Link href="/" className="transform hover:scale-105 transition-transform duration-300">
-                  <Image src={myImage} alt="Reg44 Consultancy Logo" width={120} height={60} className="rounded-lg border border-orange-300 hover:border-blue-400 transition-colors duration-300" />
-                </Link>
-                <nav className="hidden md:block">
-                  <ul className="flex space-x-8 text-gray-700">
-                    {navItems.map((item) => (
-                      <li key={item} className="relative overflow-hidden group">
-                        <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="hover:text-orange-500 transition duration-300">
-                          {item}
-                          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-                <MobileMenu navItems={navItems} />
-              </div>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-gray-100 to-white text-gray-800`}
+      >
+        <header id="main-header" className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-orange-300">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex justify-between items-center">
+              <Link href="/" className="transform hover:scale-105 transition-transform duration-300">
+                <Image src={myImage} alt="Reg44 Consultancy Logo" width={120} height={60} className="rounded-lg border border-orange-300 hover:border-blue-400 transition-colors duration-300" />
+              </Link>
+              <nav className="hidden md:block">
+                <ul className="flex space-x-8 text-gray-700">
+                  {navItems.map((item) => (
+                    <li key={item} className="relative overflow-hidden group">
+                      <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="hover:text-orange-500 transition duration-300">
+                        {item}
+                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <MobileMenu navItems={navItems} />
             </div>
-          </header>
-        <main className="min-h-screen">
+          </div>
+        </header>
+        <main className="relative">
           {children}
         </main>
-        <footer className="bg-gray-800 text-white py-12 border-t border-orange-300">
+        <footer className="bg-gray-800 bg-opacity-90 text-white py-12 border-t border-orange-300 relative z-10">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-8 md:mb-0 text-center md:text-left">
