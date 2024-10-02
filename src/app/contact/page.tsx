@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useRef } from 'react'
 import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
 import myImage from '../../images/contact.jpeg'
 
 export default function Contact() {

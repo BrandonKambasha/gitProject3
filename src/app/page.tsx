@@ -4,8 +4,6 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { ChevronRightIcon, StarIcon, HomeIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline'
-import myImage from '../images/img9.avif'
-import myImage2 from '../images/career2.jpg'
 import myImage3 from '../images/reg44.png'
 
 const MotionLink = motion(Link)
