@@ -15,12 +15,12 @@ export default function Team() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
 
   const teamMembers = [
-    { name: "Social Workers", role: "Social Worker" },
-    { name: "Safeguarding Audit Officers", role: "Youth Worker" },
-    { name: "Youth Workers", role: "Safeguarding Audit Officer" },
-    { name: "Quality Assurance Leads", role: "Quality Assurance Lead" },
-    { name: "Regulations 44 Visitors", role: "Regulation 44 Visitor" },
-    { name: "Performance Leads", role: "Performance Improvement Lead" },
+    { name: "Social Workers",  },
+    { name: "Safeguarding Audit Officers",},
+    { name: "Youth Workers", },
+    { name: "Quality Assurance Leads",  },
+    { name: "Regulations 44 Visitors",  },
+    { name: "Performance Improvement Leads", },
   ]
 
   return (
@@ -76,7 +76,6 @@ export default function Team() {
                 >
                   <UserIcon className="h-16 w-16 text-blue-500 mx-auto mb-4" />
                   <h3 className="text-2xl font-semibold mb-2 text-blue-900">{member.name}</h3>
-                  <p className="text-lg text-orange-700 mb-2">{member.role}</p>
                 </motion.div>
               ))}
             </div>

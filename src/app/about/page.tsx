@@ -65,7 +65,7 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-4xl font-bold mb-6 text-blue-900">Our Mission</h2>
+                <h2 className="text-4xl font-bold mb-6 text-blue-900">About Us</h2>
                 <p className="text-orange-700 mb-4">
                   At REG 44 CONSULTANCY, we are dedicated to supporting Semi Independent Accommodation and Residential Children's Home Providers across the United Kingdom. Our mission is to help organizations meet the needs of young people they support, ensuring the best possible outcomes for children and young adults in care settings.
                 </p>
