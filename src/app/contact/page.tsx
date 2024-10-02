@@ -1,20 +1,28 @@
 import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
-import myImage from '../../images/img5.jpeg'
+import myImage from '../../images/contact.jpg'
 
 export default function Contact() {
+  const contactInfo = [
+    { icon: PhoneIcon, title: "Phone", content: "07704427990" },
+    { icon: EnvelopeIcon, title: "Email", content: "support@reg44visitor.co.uk" },
+    { icon: MapPinIcon, title: "Address", content: "Oak Lodge Business Centre, 129 School Lane, Little Melton, Norwich, NR9 3LB" },
+    { icon: ClockIcon, title: "Business Hours", content: "Monday - Friday: 9:00 AM - 5:00 PM" },
+  ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <main>
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 opacity-90"></div>
           <Image
             src={myImage}
-            alt="Services Hero"
+            alt="Contact Hero"
             layout="fill"
             objectFit="cover"
             className="mix-blend-overlay"
-          />          <div className="container mx-auto px-4 text-center relative z-10">
+          />
+          <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">Get in Touch</h1>
             <p className="text-xl max-w-2xl mx-auto mb-8 text-white drop-shadow-md">We're here to answer your questions and discuss how we can help elevate your care standards</p>
           </div>
@@ -25,34 +33,15 @@ export default function Contact() {
             <div className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl">
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact Information</h2>
               <div className="space-y-6">
-                <div className="flex items-center">
-                  <PhoneIcon className="h-6 w-6 text-orange-500 mr-4" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
-                    <p className="text-gray-600">07704427990</p>
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-center">
+                    <item.icon className="h-6 w-6 text-indigo-500 mr-4" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
+                      <p className="text-gray-600">{item.content}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center">
-                  <EnvelopeIcon className="h-6 w-6 text-orange-500 mr-4" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Email</h3>
-                    <p className="text-gray-600">support@reg44visitor.co.uk</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <MapPinIcon className="h-6 w-6 text-orange-500 mr-4" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Address</h3>
-                    <p className="text-gray-600">Oak Lodge Business Centre, 129 School Lane, Little Melton, Norwich, NR9 3LB</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <ClockIcon className="h-6 w-6 text-orange-500 mr-4" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
             <div className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl">
@@ -60,23 +49,23 @@ export default function Contact() {
               <form className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input type="text" id="name" name="name" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                  <input type="text" id="name" name="name" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input type="email" id="email" name="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                  <input type="email" id="email" name="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea id="message" name="message" rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                  <textarea id="message" name="message" rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
                 </div>
-                <button type="submit" className="bg-gradient-to-r from-orange-500 to-blue-600 text-white font-bold py-2 px-4 rounded-md hover:from-orange-600 hover:to-blue-700 transition duration-300">Send Message</button>
+                <button type="submit" className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold py-2 px-4 rounded-md hover:from-indigo-600 hover:to-blue-700 transition duration-300">Send Message</button>
               </form>
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-700">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8 text-white">Visit Us</h2>
             <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-4 rounded-xl">

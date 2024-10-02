@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChartBarIcon, UserGroupIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-import myImage from '../../images/reg44.png'
-import teamImage from '../../images/img4.avif'
-import officeImage from '../../images/img9.avif'
+import myImage from '../../images/career1.jpg'
+import myImage2 from '../../images/career2.jpg'
+import myImage3 from '../../images/services.jpeg'
 const serviceCategories = [
   {
     title: "Core Services",
@@ -33,12 +34,12 @@ const additionalServices = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <main>
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 opacity-90"></div>
           <Image
-            src={teamImage}
+            src={myImage2}
             alt="Services Hero"
             layout="fill"
             objectFit="cover"
@@ -59,10 +60,10 @@ export default function Services() {
               {category.services.map((service, serviceIndex) => (
                 <div key={serviceIndex} className="bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
                   <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-blue-500 rounded-full opacity-20 blur-xl"></div>
-                    <service.icon className="h-16 w-16 text-orange-500 relative z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-20 blur-xl"></div>
+                    <service.icon className="h-16 w-16 text-indigo-500 relative z-10" />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4 text-blue-600">{service.name}</h3>
+                  <h3 className="text-2xl font-semibold mb-4 text-indigo-600">{service.name}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </div>
               ))}
@@ -70,9 +71,9 @@ export default function Services() {
           </section>
         ))}
 
-        <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 relative">
+        <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20 relative">
           <Image
-            src={officeImage}
+            src={myImage}
             alt="Additional Services"
             layout="fill"
             objectFit="cover"
@@ -83,7 +84,7 @@ export default function Services() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {additionalServices.map((service, index) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl flex items-center">
-                  <ChevronRightIcon className="h-6 w-6 mr-4 text-orange-300" />
+                  <ChevronRightIcon className="h-6 w-6 mr-4 text-indigo-300" />
                   <p>{service}</p>
                 </div>
               ))}
@@ -95,19 +96,19 @@ export default function Services() {
           <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">Our Approach</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600">Tailored Solutions</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-600">Tailored Solutions</h3>
               <p className="text-gray-600 mb-4">We understand that each care provider has unique challenges and needs. Our services are customized to address your specific requirements, ensuring maximum impact and relevance.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600">Continuous Improvement</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-600">Continuous Improvement</h3>
               <p className="text-gray-600 mb-4">We don't just provide one-off services. Our approach focuses on continuous improvement, working alongside you to implement changes and monitor progress over time.</p>
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-orange-400 to-blue-500 relative">
+        <section className="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 relative">
           <Image
-            src={myImage}
+            src={myImage3}
             alt="CTA Background"
             layout="fill"
             objectFit="cover"
@@ -115,10 +116,10 @@ export default function Services() {
           />
           <div className="container mx-auto px-4 text-center relative z-10">
             <h2 className="text-4xl font-bold mb-8 text-white">Ready to Enhance Your Care Provision?</h2>
-            <a href="/contact" className="bg-white text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-flex items-center">
+            <Link href="/contact" className="bg-white text-indigo-600 hover:bg-indigo-600 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-flex items-center">
               Get Started Today
               <ChevronRightIcon className="h-5 w-5 ml-2" />
-            </a>
+            </Link>
           </div>
         </section>
       </main>
