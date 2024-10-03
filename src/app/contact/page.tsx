@@ -58,7 +58,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl mb-12"
           >
-            We're here to answer your questions and discuss how we can help elevate your care standards
+            We're here to answer your questions and discuss how we can help elevate your support standards
           </motion.p>
         </section>
 

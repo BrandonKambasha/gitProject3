@@ -40,7 +40,9 @@ export default function RootLayout({
             <div className="flex justify-between items-center">
               <Link href="/" className="transform hover:scale-105 transition-transform duration-300">
                 <Image src={myImage} alt="Reg44 Consultancy Logo" width={120} height={60} className="rounded-lg border border-orange-300 hover:border-blue-400 transition-colors duration-300" />
+                <p style={{marginLeft:-80}}>Children & Young People at the Centre</p>
               </Link>
+              
               <nav className="hidden md:block">
                 <ul className="flex space-x-8 text-gray-700">
                   {navItems.map((item) => (
@@ -65,9 +67,13 @@ export default function RootLayout({
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-8 md:mb-0 text-center md:text-left">
                 <Image src={myImage} alt="Reg44 Consultancy Logo" width={120} height={60} className="mb-4 mx-auto md:mx-0 rounded-lg border border-orange-300 hover:border-blue-400 transition-colors duration-300" />
-                <p className="text-sm animate-pulse">&copy; 2024 Reg44 Consultancy. Shaping the future of care, today.</p>
+                <p className="text-sm animate-pulse">&copy; 2024 Reg44 Consultancy. Shaping the future of support, today.</p>
+                
+                <p className="text-sm animate-pulse">Company Number: 15296035</p>
+                 
               </div>
               <div className="flex flex-col space-y-4">
+                
                 <a href="tel:07704427990" className="flex items-center justify-center md:justify-start hover:text-orange-300 transition duration-300 group">
                   <PhoneIcon className="h-5 w-5 mr-2 group-hover:animate-bounce" />
                   <span className="relative">

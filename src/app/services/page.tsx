@@ -5,7 +5,7 @@ import { useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChartBarIcon, UserGroupIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
-import backgroundImage from '../../images/img4.avif'
+import backgroundImage from '../../images/supportPic.jpg'
 import ctaImage from '../../images/img2.avif'
 
 const MotionLink = motion(Link)
@@ -16,14 +16,14 @@ const serviceCategories = [
     services: [
       { icon: StarIcon, name: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes" },
       { icon: HomeIcon, name: "House Inspections", description: "Thorough inspections of Semi Independent Accommodation" },
-      { icon: ClipboardDocumentCheckIcon, name: "Consultancy Services", description: "Professional guidance for new and existing care provisions" },
+      { icon: ClipboardDocumentCheckIcon, name: "Consultancy Services", description: "Professional guidance for new and existing support provisions" },
     ]
   },
   {
     title: "Quality & Management",
     services: [
       { icon: ChartBarIcon, name: "Quality Assurance", description: "Developing and implementing Quality Assurance Frameworks" },
-      { icon: UserGroupIcon, name: "Management Coaching", description: "Coaching and mentoring for care management teams" },
+      { icon: UserGroupIcon, name: "Management Coaching", description: "Coaching and mentoring for support management teams" },
       { icon: AcademicCapIcon, name: "Training Programs", description: "Bespoke training and development solutions" },
     ]
   }
@@ -76,7 +76,7 @@ export default function Services() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl mb-12"
           >
-            Comprehensive solutions to elevate care standards in Semi Independent Accommodation and Residential Children's Homes
+            Comprehensive solutions to elevate support standards in Semi Independent Accommodation and Residential Children's Homes
           </motion.p>
         </section>
 
@@ -165,7 +165,7 @@ export default function Services() {
                 className="bg-gradient-to-br from-orange-100 to-blue-100 p-6 rounded-lg shadow-lg"
               >
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">Tailored Solutions</h3>
-                <p className="text-orange-700 mb-4">We understand that each care provider has unique challenges and needs. Our services are customized to address your specific requirements, ensuring maximum impact and relevance.</p>
+                <p className="text-orange-700 mb-4">We understand that each support provider has unique challenges and needs. Our services are customized to address your specific requirements, ensuring maximum impact and relevance.</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -201,7 +201,7 @@ export default function Services() {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold mb-8 text-white"
             >
-              Ready to Enhance Your Care Provision?
+              Ready to Enhance Your Support Provision?
             </motion.h2>
             <MotionLink
               href="/contact"

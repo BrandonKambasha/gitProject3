@@ -21,7 +21,7 @@ export default function Home() {
   const services = [
     { icon: StarIcon, title: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes" },
     { icon: HomeIcon, title: "House Inspections", description: "Thorough inspections of Semi Independent Accommodation" },
-    { icon: ClipboardDocumentCheckIcon, title: "Consultancy Services", description: "Professional guidance for new and existing care provisions" },
+    { icon: ClipboardDocumentCheckIcon, title: "Consultancy Services", description: "Professional guidance for new and existing support provisions" },
   ]
 
   return (
@@ -117,9 +117,9 @@ export default function Home() {
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { title: "Experienced Team", description: "Over 20 years of experience in Local Authorities and care provision." },
+                { title: "Experienced Team", description: "Over 20 years of experience in Local Authorities and support provision." },
                 { title: "Comprehensive Services", description: "From Reg 44 visits to management coaching and quality assurance." },
-                { title: "Tailored Support", description: "Customized solutions for diverse care settings across the UK." },
+                { title: "Tailored Support", description: "Customized solutions for diverse support settings across the UK." },
               ].map((feature, index) => (
                 <motion.div
                   key={index}
@@ -144,7 +144,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold mb-8 text-blue-900"
             >
-              Ready to Elevate Your Care Services?
+              Ready to Elevate Your Support Services?
             </motion.h2>
             <MotionLink
               href="/contact"

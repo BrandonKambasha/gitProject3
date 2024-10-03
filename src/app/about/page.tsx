@@ -22,7 +22,7 @@ export default function About() {
   const coreValues = [
     { icon: UserGroupIcon, title: "Expertise", description: "We bring over 20 years of experience in Local Authorities to every project." },
     { icon: ShieldCheckIcon, title: "Quality", description: "We uphold the highest standards in our services and recommendations." },
-    { icon: AcademicCapIcon, title: "Innovation", description: "We continuously seek new ways to improve care standards and practices." },
+    { icon: AcademicCapIcon, title: "Innovation", description: "We continuously seek new ways to improve support standards and practices." },
   ]
 
   return (
@@ -53,7 +53,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl mb-12"
           >
-            Pioneering the future of care with expertise and innovation
+            Children & Young People at the Centre
           </motion.p>
         </section>
 
@@ -66,12 +66,15 @@ export default function About() {
                 transition={{ duration: 0.5 }}
               >
                 <h2 className="text-4xl font-bold mb-6 text-blue-900">About Us</h2>
+                
                 <p className="text-orange-700 mb-4">
-                  At REG 44 CONSULTANCY, we are dedicated to supporting Semi Independent Accommodation and Residential Children's Home Providers across the United Kingdom. Our mission is to help organizations meet the needs of young people they support, ensuring the best possible outcomes for children and young adults in care settings.
-                </p>
+                At REG 44 CONSULTANCY, we are committed to leveraging our extensive experience and diverse expertise to support and elevate support standards across the UK. Our team is dedicated to providing tailored, innovative solutions that make a real difference in the lives of children and young people.                 </p>
+                <h3 className="text-blue-900 font-bold">Diverse Skill Set</h3>
                 <p className="text-orange-700 mb-4">
-                  We work with Local Authorities, Organizations, and private companies, offering our expertise to those working with Families on the Edge of Care, Children who are Looked After, Unaccompanied Asylum Seeking Children, Care Leavers, Migrant Families, and families from Black Asian and Ethnic Minority Backgrounds.
-                </p>
+                From social work to quality assurance, our team's diverse backgrounds ensure we can provide comprehensive support across all aspects of children’s homes and supported accommodation.                 </p>
+                <h3 className="text-blue-900 font-bold">Local Authority Experience</h3>
+                <p className="text-orange-700 mb-4">Our team brings over 20 years of combined experience working in Local Authorities, providing invaluable insights into the challenges and requirements of children’s homes and supported accommodation.</p>
+              
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -126,9 +129,9 @@ export default function About() {
             </motion.h2>
             <div className="space-y-8">
               {[
-                { title: "Safeguarding", description: "Our team includes experienced Safeguarding Audit Officers, ensuring the highest standards of child protection in care settings." },
+                { title: "Safeguarding", description: "Our team includes experienced Safeguarding Audit Officers, ensuring the highest standards of child protection in support settings." },
                 { title: "Quality Assurance", description: "With Quality Assurance Leads on our team, we help organizations implement robust quality management systems." },
-                { title: "Social Work", description: "Our team includes experienced Social Workers who understand the complexities of child care and protection." },
+                { title: "Social Work", description: "Our team includes experienced Social Workers who understand the complexities of child support and protection." },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -170,7 +173,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold mb-8 text-blue-900"
             >
-              Ready to Elevate Your Care Standards?
+              Ready to Elevate Your Support Standards?
             </motion.h2>
             <MotionLink
               href="/contact"

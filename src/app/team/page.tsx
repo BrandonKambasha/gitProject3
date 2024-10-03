@@ -100,7 +100,7 @@ export default function Team() {
                 className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl"
               >
                 <h3 className="text-2xl font-semibold mb-4">Local Authority Experience</h3>
-                <p>Our team brings over 20 years of combined experience working in Local Authorities, providing invaluable insights into the challenges and requirements of care provision.</p>
+                <p>Our team brings over 20 years of combined experience working in Local Authorities, providing invaluable insights into the challenges and requirements of support provision.</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -109,7 +109,7 @@ export default function Team() {
                 className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl"
               >
                 <h3 className="text-2xl font-semibold mb-4">Diverse Skill Set</h3>
-                <p>From social work to quality assurance, our team's diverse backgrounds ensure we can provide comprehensive support across all aspects of care provision.</p>
+                <p>From social work to quality assurance, our team's diverse backgrounds ensure we can provide comprehensive support across all aspects of support provision.</p>
               </motion.div>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Team() {
               transition={{ duration: 0.5 }}
               className="text-xl text-orange-700 max-w-3xl mx-auto"
             >
-              At REG 44 CONSULTANCY, we are committed to leveraging our extensive experience and diverse expertise to support and elevate care standards across the UK. Our team is dedicated to providing tailored, innovative solutions that make a real difference in the lives of young people in care.
+              At REG 44 CONSULTANCY, we are committed to leveraging our extensive experience and diverse expertise to support and elevate support standards across the UK. Our team is dedicated to providing tailored, innovative solutions that make a real difference in the lives of young people in support.
             </motion.p>
           </div>
         </section>
