@@ -39,8 +39,10 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
               <Link href="/" className="transform hover:scale-105 transition-transform duration-300">
-                <Image src={myImage} alt="Reg44 Consultancy Logo" width={120} height={60} className="rounded-lg border border-orange-300 hover:border-blue-400 transition-colors duration-300" />
-                <p style={{marginLeft:-80}}>Children & Young People at the Centre</p>
+                <div className="flex flex-col items-center">
+                  <Image src={myImage} alt="Reg44 Consultancy Logo" width={120} height={60} className="rounded-lg border border-orange-300 hover:border-blue-400 transition-colors duration-300" />
+                  <p>Children & Young People at the Centre</p>
+                </div>
               </Link>
               
               <nav className="hidden md:block">
