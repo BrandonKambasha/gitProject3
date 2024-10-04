@@ -14,9 +14,11 @@ const serviceCategories = [
   {
     title: "Core Services",
     services: [
-      { icon: StarIcon, name: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes" },
-      { icon: HomeIcon, name: "House Inspections", description: "Thorough inspections of Semi Independent Accommodation" },
-      { icon: ClipboardDocumentCheckIcon, name: "Consultancy Services", description: "Professional guidance for new and existing support provisions" },
+          // Start of Selection
+          { icon: StarIcon, name: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes" },
+          { icon: HomeIcon, name: "House Inspections", description: "Thorough inspections of Semi Independent Accommodation" },
+          { icon: ClipboardDocumentCheckIcon, name: "Undertaking Location Risks Assessments", description: "Comprehensive assessments to identify and mitigate risks in various locations" },
+
     ]
   },
   {
@@ -24,7 +26,6 @@ const serviceCategories = [
     services: [
       { icon: ChartBarIcon, name: "Quality Assurance", description: "Developing and implementing Quality Assurance Frameworks" },
       { icon: UserGroupIcon, name: "Management Coaching", description: "Coaching and mentoring for support management teams" },
-      { icon: AcademicCapIcon, name: "Training Programs", description: "Bespoke training and development solutions" },
     ]
   }
 ]
@@ -35,7 +36,9 @@ const additionalServices = [
   "Ofsted Preparation Visits",
   "Support with improvement plans",
   "Learning and Development for Local Authorities",
-  "Specialized support for diverse communities"
+  "Specialized support for diverse communities",
+  "Training Programs",
+  "Consultancy Services",
 ]
 
 export default function Services() {
@@ -91,7 +94,7 @@ export default function Services() {
               >
                 {category.title}
               </motion.h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className={`grid ${category.title === "Quality & Management" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-3"} gap-8`}>
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={serviceIndex}

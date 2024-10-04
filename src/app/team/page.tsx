@@ -20,7 +20,7 @@ export default function Team() {
     { name: "Youth Workers", },
     { name: "Quality Assurance Leads",  },
     { name: "Regulations 44 Visitors",  },
-    { name: "Performance Improvement Leads", },
+    { name: "Performance Improvement Managers", },
   ]
 
   return (
