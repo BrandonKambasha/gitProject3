@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChartBarIcon, UserGroupIcon, AcademicCapIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
+import { StarIcon, HomeIcon, ClipboardDocumentCheckIcon, ChartBarIcon, UserGroupIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import backgroundImage from '../../images/supportPic.jpg'
 import ctaImage from '../../images/img2.avif'
 
