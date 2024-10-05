@@ -17,7 +17,7 @@ const serviceCategories = [
           // Start of Selection
           { icon: StarIcon, name: "Reg 44 Visits", description: "Expert Regulation 44 visits to residential children's homes" },
           { icon: HomeIcon, name: "House Inspections", description: "Thorough inspections of Semi Independent Accommodation" },
-          { icon: ClipboardDocumentCheckIcon, name: "Undertaking Location Risks Assessments", description: "" },
+          { icon: ClipboardDocumentCheckIcon, name: "Undertaking Location Risks Assessments", description: "Comprehensive assessments to identify and mitigate risks in various locations" },
 
     ]
   },
